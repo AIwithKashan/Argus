@@ -9,6 +9,12 @@
 ![Argus Architecture Diagram](architecture.png)
 
 ---
+## 👥 Team Members
+
+| Name | Role |
+|------|------|
+| **Kashan Khan (AIwithKashan)** | Co-Developer & Infrastructure Lead |
+| **Ayushi Dwivedi (ayushidubey4569-cell)** | Co-Developer & Load Testing Engineer |
 
 ## 📖 The Problem
 In modern cloud infrastructure, **downtime is expensive**. Traditional monitoring tools are "reactive"—they wait for a server to crash before alerting a human engineer at 3 AM. By the time the alert is received, the damage is done.
@@ -40,6 +46,28 @@ Upon confirming a threat, Gemini authorizes a **"Kill Command"**. The Agent swit
 * It checks a robust **Safety Whitelist** to avoid killing critical system apps (e.g., Explorer, Browsers).
 * It intelligently differentiates between its own components (Dashboard, Server) and rogue Python scripts, ensuring it only terminates the threat.
 
+---
+
+## 🔥 Load Testing Module (By Ayushi)
+
+To validate Argus’s autonomous threat response, a custom **Multicore CPU Burner** has been implemented by Ayushi.
+
+This module generates **100% CPU usage on every core** to simulate extreme real-world overload scenarios.
+
+### 🎯 Why This Module Matters
+- Helps Argus detect CPU-based anomalies  
+- Triggers autonomous “Kill Command”  
+- Tests prediction accuracy of the AI engine  
+- Validates the safety-checking mechanism  
+- Ensures Argus reliably distinguishes between legitimate and harmful workloads  
+
+### 📂 File Location
+`load_generators/cpu_burner_multicore.py`
+
+### ▶️ Run the Burner
+```bash
+python cpu_burner_multicore.py
+```
 ---
 
 ## 🚀 Quick Start Guide
