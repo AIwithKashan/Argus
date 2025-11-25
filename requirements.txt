@@ -1,0 +1,11 @@
+flask
+streamlit
+google-generativeai
+python-dotenv
+psutil
+pandas
+altair
+wmi
+pywin32
+requests
+pyttsx3
